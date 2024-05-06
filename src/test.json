@@ -1,0 +1,248 @@
+{
+  "version": 8,
+  "sprite": "/oss-static-api/res-static-lib/sprite/bdh-resource-view/2023/icon-layer-sprite",
+  "glyphs": "/oss-static-api/res-static-lib/font/bdh-resource-view/2023/public-font-0110-sy/{fontstack}/{range}.pbf",
+  "sources": {
+    "879698251387772304": {
+      "type": "raster",
+      "tiles": [
+        "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png"
+      ],
+      "tileSize": 256,
+      "minzoom": 0,
+      "maxzoom": 15
+    },
+    "133": {
+      "type": "vector",
+      "tiles": [
+        "/geoservice-api/data/wcp_drain_irrig_ditch/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 0,
+      "maxzoom": 15
+    },
+    "134": {
+      "type": "vector",
+      "tiles": [
+        "/geoservice-api/data/wcp_irrigation/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 0,
+      "maxzoom": 15
+    },
+    "175": {
+      "type": "vector",
+      "tiles": [
+        "/geoservice-api/data/wcp_siphon/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 0,
+      "maxzoom": 15
+    },
+    "491": {
+      "type": "vector",
+      "tiles": [
+        "/geoservice-api/data/wcp_bridge_label/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 0,
+      "maxzoom": 15
+    },
+    "492": {
+      "type": "vector",
+      "tiles": [
+        "/geoservice-api/data/wcp_sluice_label/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 0,
+      "maxzoom": 15
+    },
+    "4114": {
+      "type": "vector",
+      "tiles": [
+        "/geoservice-api/data/wcp_water_well_info/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "879698228486872208",
+      "source": "879698251387772304",
+      "type": "raster",
+      "paint": {},
+      "layout": {},
+      "metadata": {},
+      "source-layer": "vLayerDark",
+      "minzoom": 0,
+      "maxzoom": 18
+    },
+    {
+      "id": "160",
+      "source": "133",
+      "type": "fill",
+      "paint": {
+        "fill-outline-color": [
+          "rgba",
+          171,
+          255,
+          250,
+          1
+        ],
+        "fill-color": [
+          "rgba",
+          92,
+          190,
+          255,
+          1
+        ]
+      },
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "hover": false,
+        "name": "排灌沟渠",
+        "event": [
+          {
+            "name": "click_within_12_20_show_popup",
+            "type": "Click",
+            "zmax": 20,
+            "zmin": 12
+          }
+        ],
+        "click": true,
+        "biz-layer-id": 100302
+      },
+      "interactive": true,
+      "source-layer": "wcp_drain_irrig_ditch",
+      "minzoom": 0,
+      "maxzoom": 20
+    },
+    {
+      "id": "152",
+      "source": "134",
+      "type": "symbol",
+      "paint": {
+        "icon-opacity": 1
+      },
+      "layout": {
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "icon-anchor": "bottom",
+        "icon-size": 0.8,
+        "icon-image": "排灌站"
+      },
+      "metadata": {
+        "hover": false,
+        "name": "排灌站",
+        "event": [],
+        "click": true,
+        "biz-layer-id": 100301
+      },
+      "interactive": true,
+      "source-layer": "wcp_irrigation",
+      "minzoom": 0,
+      "maxzoom": 20
+    },
+    {
+      "id": "154",
+      "source": "492",
+      "type": "symbol",
+      "paint": {
+        "icon-opacity": 1
+      },
+      "layout": {
+        "icon-allow-overlap": false,
+        "visibility": "visible",
+        "icon-anchor": "bottom",
+        "icon-size": 0.8,
+        "icon-image": "水闸"
+      },
+      "metadata": {
+        "hover": false,
+        "name": "水闸",
+        "event": [],
+        "click": true,
+        "biz-layer-id": 100403
+      },
+      "interactive": true,
+      "source-layer": "wcp_sluice_label",
+      "minzoom": 0,
+      "maxzoom": 20
+    },
+    {
+      "id": "167",
+      "source": "491",
+      "type": "symbol",
+      "paint": {
+        "icon-opacity": 1
+      },
+      "layout": {
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "icon-anchor": "bottom",
+        "icon-size": 0.8,
+        "icon-image": "桥梁"
+      },
+      "metadata": {
+        "hover": false,
+        "name": "桥梁",
+        "event": [],
+        "click": true,
+        "biz-layer-id": 100401
+      },
+      "interactive": true,
+      "source-layer": "wcp_bridge_label",
+      "minzoom": 0,
+      "maxzoom": 20
+    },
+    {
+      "id": "168",
+      "source": "175",
+      "type": "symbol",
+      "paint": {
+        "icon-opacity": 1
+      },
+      "layout": {
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "icon-anchor": "bottom",
+        "icon-size": 0.8,
+        "icon-image": "倒虹吸"
+      },
+      "metadata": {
+        "hover": true,
+        "name": "倒虹吸",
+        "event": [],
+        "click": true,
+        "biz-layer-id": 100405
+      },
+      "interactive": true,
+      "source-layer": "wcp_siphon",
+      "minzoom": 0,
+      "maxzoom": 20
+    },
+    {
+      "id": "11404",
+      "source": "4114",
+      "type": "symbol",
+      "paint": {},
+      "layout": {
+        "icon-allow-overlap": true,
+        "visibility": "visible",
+        "icon-anchor": "bottom",
+        "icon-size": 0.8,
+        "icon-image": "取水井"
+      },
+      "metadata": {
+        "hover": true,
+        "name": "补水井",
+        "usage-catalog": 0,
+        "event": [],
+        "click": true,
+        "biz-layer-id": 3454167
+      },
+      "interactive": true,
+      "source-layer": "wcp_water_well_info",
+      "minzoom": 0,
+      "maxzoom": 20
+    }
+  ]
+}

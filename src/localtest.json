@@ -1,0 +1,90 @@
+{
+  "version": 8,
+  "name": "Empty Style",
+  "metadata": {
+    "maputnik:renderer": "ol"
+  },
+  "sources": {
+    "r1q3abr": {
+      "type": "vector",
+      "tiles": [
+        "http://localhost:8080/geoserver/gwc/service/tms/1.0.0/ne%3Aworld@EPSG%3A3857/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 0,
+      "maxzoom": 20
+    },
+    "879698251387772304": {
+      "type": "raster",
+      "tiles": [
+        "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png"
+      ],
+      "tileSize": 256,
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "sprite": "",
+  "glyphs": "https://orangemug.github.io/font-glyphs/glyphs/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "879698228486872208",
+      "source": "879698251387772304",
+      "type": "raster",
+      "paint": {},
+      "layout": {},
+      "metadata": {},
+      "source-layer": "vLayerDark",
+      "minzoom": 0,
+      "maxzoom": 18
+    },
+    {
+      "id": "countries",
+      "type": "fill",
+      "source": "r1q3abr",
+      "source-layer": "countries",
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(141, 95, 0, 1)"
+      }
+    },
+    {
+      "id": "boundary_lines",
+      "type": "line",
+      "source": "r1q3abr",
+      "source-layer": "boundary_lines",
+      "paint": {
+        "line-color": "rgba(0, 13, 255, 1)",
+        "line-width": 1
+      }
+    },
+    {
+      "id": "coastlines",
+      "type": "line",
+      "source": "r1q3abr",
+      "source-layer": "coastlines",
+      "paint": {
+        "line-color": "rgba(255, 116, 116, 1)",
+        "line-width": 3
+      }
+    },
+    {
+      "id": "disputed_areas",
+      "type": "fill",
+      "source": "r1q3abr",
+      "source-layer": "disputed_areas",
+      "minzoom": 3,
+      "paint": {
+        "fill-color": "rgba(155, 255, 126, 1)"
+      }
+    },
+    {
+      "id": "populated_places",
+      "type": "circle",
+      "source": "r1q3abr",
+      "source-layer": "populated_places"
+    }
+  ],
+  "id": "nvki30m"
+}
